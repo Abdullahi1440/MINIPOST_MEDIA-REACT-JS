@@ -9,24 +9,33 @@
  
   const handlesubmit=(event)=>{
       event.preventDefault();
-      const newpost={content , image ,user };
+      const newpost={content , image ,user , id:Date.now};
     //  setpost([newpost ,...post])
     dispatch({type:"ADD_NEW_POST" ,payload:{post:newpost}});
     setcontent("");
     imageref.current.value="";
   };
   return (
-
-    
-    <div>
-      <h1>Create Post </h1>
-      <form  onSubmit={handlesubmit}>
-    <input onChange={(event)=>setcontent(event.target.value)} type="text" placeholder='create post' value={content}/>
-    <input  type="file" onChange={(event)=>setimage(event.target.files[0])} ref={imageref} />
-    <button type="submit">Submit</button>
-
-    </form>
+<>
+   
+      <div className="container">
+      <h1 className='text-xl'>Create Post </h1>
+      <form className='row' onSubmit={handlesubmit}  >
+        <div className='col-6'>
+    <input onChange={(event)=>setcontent(event.target.value)} type="text"  className='form-control' placeholder='create post' value={content}  />
     </div>
+    <div className="col-6">
+    <input  type="file" className='form-control' onChange={(event)=>setimage(event.target.files[0])} ref={imageref} />
+    </div>
+    <div className="col-md-3">
+    <button type="submit" className='btn btn-success mt-3 fs-left'>Submit</button>
+    </div>
+    </form>
+    
+    </div>
+   
+   
+    </>
   )
 }
 export default Createpost;
