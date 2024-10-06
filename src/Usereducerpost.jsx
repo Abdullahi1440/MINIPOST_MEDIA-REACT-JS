@@ -11,8 +11,8 @@ export const Usereducerpost = (state ,action) => {
     }
     case"DELETE_POST":{
     let deletePostId=action.payload.postId;
-    const newposts=state.post.filter(post=>post.id !==deletePostId);
-    return{posts:newposts}
+    const newpost=state.post.filter(post=>post.id!==deletePostId);
+    return{post:newpost}
     }
     default:
         return state;

@@ -7,9 +7,9 @@ import { Usercontext } from '../App';
   const mycontextvalue=useContext(Usercontext);
 
   return (
-    <div>
-      <span>Welcome {mycontextvalue} </span>
-      <button onClick={()=>setuser("")}>Logout</button>
+    <div className='btn'>
+      <span className='text-xl text-success'>Welcome {mycontextvalue} </span>
+      <button onClick={()=>setuser("")} className='btn btn-primary'>Logout</button>
     </div>
   )
 }

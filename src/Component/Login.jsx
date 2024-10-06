@@ -8,16 +8,19 @@ export const Login = (props) => {
   }
   return (
 
-      <div>
+      <div className='d-flex justify-content-center' >
       <>
-  
-    <form action="" onSubmit={handleuser}>
-      <input type="text"placeholder='username'  
+      <div className='card w-50 h-200'>
+  <div className='card-body   '>
+    <h3 className='card-title text-uppercase '>Login from </h3>
+    <form action="" onSubmit={handleuser} className='form-group'>
+      <input type="text"placeholder='username'  className='form-control'
       onChange={(event)=>setusername(event.target.value)}
       />
-      <button>Login</button>
+      <button className='btn btn-success mt-3 btn-outline'>Login</button>
     </form>
-  
+    </div>
+    </div>
     </>
     </div>
   
