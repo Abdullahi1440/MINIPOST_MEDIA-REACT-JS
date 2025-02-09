@@ -21,7 +21,7 @@ const Post=({content ,image , user ,id })=>{
         
         <div className="row"> 
           <div className="col-10 text-align-center bg-light shadow-gray ">
-          <p className='text-'>{content}</p>
+          <p className='text-lg'>{content}</p>
           {image && <img src={URL.createObjectURL(image)} className="img-fluid rounded float-start" alt="" />}
           { user && <p style={{color: currentuser && "green"}} >
           {user}!</p>}
@@ -29,7 +29,7 @@ const Post=({content ,image , user ,id })=>{
           <div className="col-1">
   
           { currentuser && <button className="btn btn-info btn-sinfo-sm mt-2" onClick={handledelete}>delete </button>}
-
+      
           </div>
         </div>
         </card>

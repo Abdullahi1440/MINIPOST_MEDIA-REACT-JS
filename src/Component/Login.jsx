@@ -1,10 +1,10 @@
 import React, { useState } from 'react'
 
-export const Login = (props) => {
+export const Login = ({setuser}) => {
   const [username , setusername]=useState();
   const handleuser=(event)=>{
     event.preventDefault();
-    props.setuser(username);
+    setuser(username);
   }
   return (
 
